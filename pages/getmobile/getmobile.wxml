@@ -1,0 +1,15 @@
+<view class="mypage">
+  <view class="big-title">验证手机号</view>
+  <view class="myform">
+    <view class="itemlist">
+      <text>手机号</text>
+      <input class="mobile" type="text" maxlength="11" placeholder="请输入手机号" placeholder-class="placeholder" bindinput="mobileInput" />
+    </view>
+    <view class="itemlist">
+      <text>验证码</text>
+      <input class="yzm" type="text" maxlength="6" placeholder="请输入验证码" placeholder-class="placeholder" bindinput="codeInput" />
+      <text class="getcode {{gray===true ? 'gray':''}}" bindtap="handleGetCode">{{getTxt}}</text>
+    </view>
+    <view class="submit-btn" bindtap="handleSubmit">确定</view>
+  </view>
+</view>

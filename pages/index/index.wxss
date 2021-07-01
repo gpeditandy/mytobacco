@@ -1,0 +1,43 @@
+.mypage{
+  margin:70rpx 20rpx;
+  width:94%;
+  background:transparent;
+  display: flex;
+  flex-direction: column;
+}
+.container{margin-bottom:20rpx;background:#fff;padding:0 30rpx 0rpx;box-sizing: border-box;}
+.run{padding:10rpx 30rpx 20rpx;}
+.cls-header{
+  width:160rpx;height:160rpx;margin-right:20rpx;border-radius: 50%;
+}
+.header-box{
+  display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-bottom: 20rpx;position: relative;bottom:40rpx;
+}
+.header{display: flex;flex-direction: row;width:60%;align-items: center;}
+.nickname{font-size:30rpx;color: #101010;}
+.user-info{display: flex;flex-direction: row;justify-content: space-between;color: #919191;margin-bottom: 20rpx;}
+.left,.left-province{display: flex;flex-direction: row;align-items: center;}
+.left-province{flex-direction: column;padding-bottom: 30rpx;}
+.left-province text:first-child{color:#101010;font-size:32rpx;margin-bottom: 6rpx;}
+.left .num{color:#101010;font-size:38rpx;margin-left:30rpx;}
+.add-device{display:flex;flex-direction: row;justify-content: center;align-items: center;height:100rpx;line-height: 100rpx;color:#25AAFF;border-top:1px solid #F2F3F5;font-size:28rpx;}
+.icon-jiahao{font-size:16rpx;margin-right:10rpx;}
+.user-identity{color: #fff;background:#FFA01C;border-top-left-radius: 30rpx;border-bottom-left-radius: 30rpx;padding:10rpx 30rpx;box-sizing: border-box;position: relative;left:30rpx;}
+.title{display: flex;flex-direction: row;justify-content: space-between;height:60rpx;line-height: 60rpx;margin:10rpx 0;}
+.title text:first-child{font-size:32rpx;color:#101010;font-weight: bold;}
+.title text:last-child{font-size:28rpx;color:#15C179;}
+.title text.running{color:#FC6053}
+.device-num{font-size:28rpx;color: #646464;margin-bottom: 10rpx;}
+.citylist{padding:30rpx 10rpx;box-sizing: border-box;}
+.cityitem{display: flex;flex-direction: row;justify-content: space-between;margin-bottom: 20rpx;align-items: center;}
+.cityitem:first-child text:nth-of-type(3){position: relative;right:10rpx;}
+.entrace{color:#25AAFF;}
+
+.comp-sub{width:100%;background:#fff;margin:0rpx auto 20rpx;padding:30rpx 20rpx 10rpx;box-sizing: border-box;}
+.sub-title{color: #101010;font-size:32rpx;font-weight: bold;margin-bottom: 20rpx;}
+.sub-bake{display: flex;flex-direction: row;align-items: center;}
+.sub-bake .num{width:50%;display: flex;align-items:baseline;padding-bottom: 30rpx;border-bottom:1px solid #E5E5E5;}
+.sub-bake .num .total{margin-left:30rpx;color:#FF6200;font-size:28rpx;}
+.sub-admin{line-height: 100rpx;height:100rpx;}
+.add-red{color:#FC6053;}
+.add-red .icon-jiantou{font-size:18rpx;margin-left:10rpx;}

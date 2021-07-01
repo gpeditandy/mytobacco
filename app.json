@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/running/running",
+    "pages/stop/stop",
+    "pages/status/status",
+    "pages/tobaccoinfo/tobaccoinfo",
+    "pages/cityadmin/cityadmin",
+    "pages/subcomadmin/subadmin",
+    "pages/citysubadmin/citysubadmin",
+    "pages/login/login",
+    "pages/temp/temp",
+    "pages/bar/bar",
+    "pages/getmobile/getmobile"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#015293",
+    "navigationBarTitleText": "智能烘烤系统",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

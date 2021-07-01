@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="tips">
+    <text class="comp-name">分公司管理员：{{adminName==='' || adminName==='undefined' || adminName===null?'暂无管理员':adminName}}</text>
+    <text class="status"></text>
+  </view>
+  <view class="no-data" wx:if="{{showEmpty}}">
+			<image src="../../images/empty.png" class="empty"></image>
+			<text class="empty-des">暂无数据!</text>
+	</view>
+  <view class="comp-sub" wx:for="{{subCompany}}" wx:key="index">
+    <view class="title">
+        <text>{{item.name}}</text>
+        <text class="{{item.status==1?'':'running'}}">{{item.status==1?'运行中':'停运'}}</text>
+      </view>
+      <view class="device-num">
+        <text>设备型号：</text>
+        <text>{{item.deviceNo}}</text>
+      </view>
+      <view class="device-num">
+        <text>管理员：</text>
+        <text>{{item.managerName==='' || item.managerName==='undefined' || item.managerName=== null ?'暂无管理员':item.managerName}}</text>
+      </view>
+  </view>
+</view>

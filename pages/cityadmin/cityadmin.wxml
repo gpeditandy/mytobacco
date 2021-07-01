@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="tips">
+    <text class="comp-name">{{cityName}}市管理员：{{managerName==='' || managerName===null || managerName==='undefined' ?'暂无管理员':managerName}}</text>
+    <text class="status">更换管理员</text>
+  </view>
+  <view class="no-data" wx:if="{{showEmpty}}">
+			<image src="../../images/empty.png" class="empty"></image>
+			<text class="empty-des">暂无数据!</text>
+	</view>
+  <view class="comp-sub" wx:for="{{companyList}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" bindtap="handleSubComAdmin">
+    <view class="sub-title">{{item.name}}</view>
+    <view class="sub-bake">
+      <view class="num">
+        <text>烤房数量</text>
+        <text class="total">{{item.roomCount}}座</text>
+      </view>
+      <view class="num">
+        <text>使用率</text>
+        <text class="total">{{item.usageRate}}%</text>
+      </view>
+    </view>
+    <view class="sub-admin">分公司管理员：{{item.managerName==='' || item.managerName==='undefined' || item.managerName=== null ?'暂无管理员':item.managerName}}</view>
+  </view>
+</view>

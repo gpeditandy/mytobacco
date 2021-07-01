@@ -1,0 +1,11 @@
+.tips{display: flex;flex-direction: row;justify-content: space-between;padding:0rpx 20rpx;box-sizing: border-box;width:100%;background:#fff;height:90rpx;line-height: 90rpx;}
+.comp-name{font-size:28rpx;color: #101010;}
+.status{font-size:28rpx;color:#25AAFF;}
+.comp-sub{width:94%;background:#fff;margin:20rpx auto;padding:30rpx 20rpx 0rpx;box-sizing: border-box;}
+.sub-title{color: #101010;font-size:32rpx;font-weight: bold;margin-bottom: 20rpx;}
+.sub-bake{display: flex;flex-direction: row;align-items: center;}
+.sub-bake .num{width:50%;display: flex;align-items: center;padding-bottom: 30rpx;border-bottom:1px solid #E5E5E5;}
+.sub-bake .num .total{margin-left:30rpx;color:#FF6200;font-size:32rpx;}
+.sub-admin{line-height: 100rpx;height:100rpx;}
+.no-data{display: flex;flex-direction: column;align-items: center;}
+.empty{margin-bottom: 100rpx;width:300rpx;height:230rpx;margin-top:100rpx}

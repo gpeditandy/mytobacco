@@ -1,0 +1,73 @@
+<view class="container">
+  <view class="tips">
+    <text class="comp-name">湖北省武汉市分公司A烤房b HBWH210532A01</text>
+    <text class="stop-statu">停运</text>
+  </view>
+  <view class="map">
+    <view class="map-nav">
+      <view class="listitem {{currentTab==0 ? 'active':''}}" data-current="0" bindtap="handleChangeNav">上棚曲线</view>
+      <view class="listitem {{currentTab==1 ? 'active':''}}" data-current="1" bindtap="handleChangeNav">下棚曲线</view>
+      <view class="listitem {{currentTab==2 ? 'active':''}}" data-current="2" bindtap="handleChangeNav">鲜烟信息</view>
+      <view class="listitem {{currentTab==3 ? 'active':''}}" data-current="3" bindtap="handleChangeNav">烘烤评分</view>
+    </view>
+    <view class="col-orange">
+      提示：图表中蓝色区域表示烤房掉温，红色区域表示干球故障，黄色区域表示升温报警
+    </view>
+    <view class="current-state">
+      <view class="current-desc-white">
+        <view class="temperature">
+          <text>开始时间</text>
+          <text>08/11</text>
+        </view>
+        <view class="temperature">
+          <text>结束时间</text>
+          <text>08/18</text>
+        </view>
+        <view class="temperature">
+          <text>总时长</text>
+          <text>159小时</text>
+        </view>
+      </view>
+      <view class="current-desc-white">
+        <view class="temperature">
+          <text>变黄阶段</text>
+          <text>48小时</text>
+        </view>
+        <view class="temperature">
+          <text>定色阶段</text>
+          <text>77小时</text>
+        </view>
+        <view class="temperature">
+          <text>干筋阶段</text>
+          <text>34小时</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="record">
+    <view class="record-title">短信报警记录</view>
+    <view class="item">
+      <text>1</text>
+      <text>2021-09-09</text>
+      <text>09:09-10:22</text>
+      <text>升温2.1度</text>
+    </view>
+    <view class="item">
+      <text>1</text>
+      <text>2021-09-09</text>
+      <text>09:09-10:22</text>
+      <text>升温2.1度</text>
+    </view>
+  </view>
+
+  <view class="btn btn2">
+    <view class="inner-btn">
+      <text class="iconfont icon-fanhui"></text>
+      <text>前一炕</text>
+    </view>
+    <view class="inner-btn">
+      <text>后一炕</text>
+      <text class="iconfont icon-jiantou"></text>
+    </view>
+  </view>
+</view> 

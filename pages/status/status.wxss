@@ -1,0 +1,52 @@
+.mypage{
+  width:100%;
+  background:transparent;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50rpx;
+}
+.out-container{margin-bottom:20rpx;background:#fff;padding:30rpx 30rpx 30rpx;box-sizing: border-box;position: relative;}
+.xAxis,.yAxis{position: absolute;left:0;top:25%;transform: rotate(-90deg);font-weight: bold;font-size:28rpx;}
+.yAxis{left:42%;top:45%;transform: rotate(0);}
+.title{display: flex;flex-direction: row;justify-content: space-between;height:60rpx;line-height: 60rpx;margin:10rpx 0;}
+.title text:first-child{font-size:32rpx;color:#101010;font-weight: bold;}
+.title text:last-child{font-size:28rpx;color:#15C179;}
+.title text.running{color:#FC6053}
+.device-num{font-size:28rpx;color: #646464;margin-bottom: 10rpx;}
+.change{display: inline-block;color: #25AAFF;margin-left:30rpx;}
+.icon-jiantou{font-size:16rpx;margin-left:10rpx;position: relative;bottom:5rpx;}
+.device-name{display: flex;flex-direction: row;justify-content: space-between;margin-top: 40rpx;}
+.itemlist{display: flex;flex-direction: column;width:50%;}
+.itemlist text:first-child{margin-bottom: 15rpx;color: #919191;}
+.itemlist text:last-child{font-size:28rpx;}
+.default-param{display: flex;flex-direction: row;align-items: center;width:100%;border:1px solid #ccc;justify-content: space-between;margin-bottom:40rpx;}
+.line-draw{margin-bottom:20rpx;}
+.list,.timer{display: flex;flex-direction: column;align-items: center;border-right: 1px solid #ccc;justify-content: center;width:25%;}
+.list text,.timer text{height:50rpx;line-height: 50rpx;border-bottom: 1px solid #ccc;width:100%;text-align:center;}
+.list text:first-child{background:#4CB050;width:100%;text-align:center;}
+.list text:last-child{border-bottom: none;}
+.list:nth-of-type(2) text:first-child{background:#FFEA3C;}
+.list:nth-of-type(3) text:first-child{background:#FEC107;}
+.list:last-child text:first-child{background:#FF9700;}
+.list:last-child{border-right:none;}
+.timer{width: 33.33%;}
+.timer:last-child{border-right:none;}
+.timer text{height:70rpx;line-height: 70rpx;}
+.timer text:last-child{border-bottom: none;}
+.bake-btn{width:100%;position:fixed;left:0;right:0;bottom:0;background:#fff;height:100rpx;line-height: 100rpx;display: flex;flex-direction: row;text-align:center;font-size:32rpx;}
+.bake-btn text:first-child{color: #25AAFF;width:350rpx;}
+.bake-btn text:last-child{color: #fff;background:#25AAFF;flex:1;}
+.line-title{font-size:30rpx;color:#101010;margin-bottom: 20rpx;}
+
+.container-echart{
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  display: flex;
+}
+ec-canvas{
+  width: 100%;
+  height: 300px;
+}

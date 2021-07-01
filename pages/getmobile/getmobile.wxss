@@ -1,0 +1,9 @@
+.mypage{display: flex;flex-direction: column;align-items: center;}
+.big-title{font-size:36rpx;margin:40rpx 20rpx 40rpx;}
+.myform{display: flex;flex-direction: column;width:96%;padding:20rpx 20rpx;box-sizing: border-box;font-size:28rpx;}
+.itemlist{display: flex;flex-direction: row;align-items: center;border-bottom:1px solid #E2E4E8;padding: 15rpx 0;margin-bottom:20rpx;}
+.itemlist text:first-child{margin-right:50rpx;}
+.itemlist .getcode{color: #FC8F38;border:1px solid #F2F3F5;padding:6rpx 10rpx;}
+.placeholder{color: #BDC7D2;}
+.submit-btn{width:100%;text-align-last: center;margin:150rpx auto;background:rgba(1,82,147,.8);color: #fff;font-size:32rpx;height:80rpx;line-height: 80rpx;border-radius: 50rpx;}
+.gray {color: #6C6C6C !important;}

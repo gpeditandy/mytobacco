@@ -1,0 +1,213 @@
+<view class="mypage">
+  <view wx:if="{{userDataList.usertype==5}}" class="common-user">
+    <view class="container">
+      <view class="header-box">
+        <view class="header">
+          <image src="{{userDataList.avatar}}" class="cls-header"></image>
+          <text class="nickname">{{userDataList.realname}}</text>
+        </view>
+        <view class="user-identity" wx:if="{{userDataList.usertype==0}}">省级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==1}}">市级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==2}}">分公司管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==3}}">烘烤管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==4}}">下乡管理员</view>
+        <view class="user-identity" wx:else="{{userDataList.usertype==5}}">一般用户</view>
+      </view>
+      <view class="user-info">
+        <view class="left">
+          <text>管理烤房(座)</text>
+          <text class="num">{{userDataList.totalCount}}</text>
+        </view>
+        <view class="left">
+          <text>正在运行(座)</text>
+          <text class="num">{{userDataList.runningCount}}</text>
+        </view>
+      </view>
+      <view class="add-device" bindtap="scan">
+        <text class="iconfont icon-jiahao"></text>
+        <text>扫码添加设备</text>
+      </view>
+    </view>
+    <view class="container run" wx:for="{{userDataList.bakeroomList}}" wx:key="index" bindtap="handleRunn">
+      <view class="title">
+        <text>{{item.name}}</text>
+        <text class="{{item.status==1?'':'running'}}">{{item.status==1?'运行中':'停运'}}</text>
+      </view>
+      <view class="device-num">
+        <text>设备编号：</text>
+        <text>{{item.deviceNo}}</text>
+      </view>
+      <view class="device-num">
+        <text>管理员：</text>
+        <text>{{item.managerName===''||item.managerName==='undefined' || item.managerName===null?'暂无管理员':item.managerName}}</text>
+      </view>
+    </view>
+
+    <!-- <view class="container run" bindtap="handleStop">
+      <view class="title">
+        <text>烤房b</text>
+        <text class="running">停运</text>
+      </view>
+      <view class="device-num">
+        <text>设备编号：</text>
+        <text>HBWH210532A01</text>
+      </view>
+      <view class="device-num">
+        <text>管理员：</text>
+        <text>小西</text>
+      </view>
+    </view>
+    <view class="container run" bindtap="handleStop2">
+      <view class="title">
+        <text>烤房c</text>
+        <text class="running">停运</text>
+      </view>
+      <view class="device-num">
+        <text>设备编号：</text>
+        <text>HBWH210532A01</text>
+      </view>
+      <view class="device-num">
+        <text>管理员：</text>
+        <text>小西</text>
+      </view>
+    </view> -->
+  </view>
+  <view wx:elif="{{userDataList.usertype==0}}" class="province-admin">
+    <view class="container">
+      <view class="header-box">
+        <view class="header">
+          <image src="{{userDataList.avatar}}" class="cls-header"></image>
+          <text class="nickname">{{userDataList.realname}}</text>
+        </view>
+        <view class="user-identity" wx:if="{{userDataList.usertype==0}}">省级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==1}}">市级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==2}}">分公司管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==3}}">烘烤管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==4}}">下乡管理员</view>
+        <view class="user-identity" wx:else="{{userDataList.usertype==5}}">一般用户</view>
+      </view>
+      <view class="user-info">
+        <view class="left-province">
+          <text>{{userDataList.totalCount}}</text>
+          <text>全省烤房(座)</text>
+        </view>
+        <view class="left-province">
+          <text>{{userDataList.runningCount}}</text>
+          <text>正在使用(台)</text>
+        </view>
+        <view class="left-province">
+          <text>{{userDataList.usageRate}}%</text>
+          <text>使用率</text>
+        </view>
+      </view>
+    </view>
+    <view class="container">
+      <view class="citylist">
+        <view class="cityitem">
+          <text>城市</text>
+          <text>烤房数量</text>
+          <text>使用</text>
+          <text>操作</text>
+        </view>
+        <view class="cityitem" wx:for="{{userDataList.bakeroomList}}" wx:key="index" data-item="{{item}}"bindtap="handleProvinceDetail">
+          <text>{{item.name}}</text>
+          <text>{{item.roomCount}}</text>
+          <text>{{item.runningCount}}</text>
+          <text class="entrace">进入</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{userDataList.usertype==1}}" class="city-admin">
+    <view class="container">
+      <view class="header-box">
+        <view class="header">
+          <image src="{{userDataList.avatar}}" class="cls-header"></image>
+          <text class="nickname">{{userDataList.realname}}</text>
+        </view>
+        <view class="user-identity" wx:if="{{userDataList.usertype==0}}">省级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==1}}">市级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==2}}">分公司管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==3}}">烘烤管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==4}}">下乡管理员</view>
+        <view class="user-identity" wx:else="{{userDataList.usertype==5}}">一般用户</view>
+      </view>
+      <view class="user-info">
+        <view class="left-province">
+          <text>{{userDataList.totalCount}}</text>
+          <text>烤房数量(座)</text>
+        </view>
+        <view class="left-province">
+          <text>{{userDataList.runningCount}}</text>
+          <text>正在使用(台)</text>
+        </view>
+        <view class="left-province">
+          <text>{{userDataList.usageRate}}%</text>
+          <text>使用率</text>
+        </view>
+      </view>
+    </view>
+    <view class="comp-sub" wx:for="{{userDataList.bakeroomList}}" wx:key="index" data-item="{{item}}" bindtap="handleCityDetail">
+      <view class="sub-title">{{item.name}}</view>
+      <view class="sub-bake">
+        <view class="num">
+          <text>烤房数量</text>
+          <text class="total">{{item.roomCount}}座</text>
+        </view>
+        <view class="num">
+          <text>使用率</text>
+          <text class="total">{{item.usageRate}}%</text>
+        </view>
+      </view>
+      <view class="sub-admin">分公司管理员：{{item.managerName==='' || item.managerName==='undefined' || item.managerName===null?'暂无管理员':item.managerName}}</view>
+    </view>
+  </view>
+  <view wx:else class="thirdAdmin">
+    <view class="container">
+      <view class="header-box">
+        <view class="header">
+          <image src="{{userDataList.avatar}}" class="cls-header"></image>
+          <text class="nickname">{{userDataList.realname}}</text>
+        </view>
+        <view class="user-identity" wx:if="{{userDataList.usertype==0}}">省级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==1}}">市级管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==2}}">分公司管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==3}}">烘烤管理员</view>
+        <view class="user-identity" wx:elif="{{userDataList.usertype==4}}">下乡管理员</view>
+        <view class="user-identity" wx:else="{{userDataList.usertype==5}}">一般用户</view>
+      </view>
+      <view class="user-info">
+        <view class="left-province">
+          <text>{{userDataList.totalCount}}</text>
+          <text>烤房(座)</text>
+        </view>
+        <view class="left-province">
+          <text>{{userDataList.runningCount}}</text>
+          <text>正在使用(座)</text>
+        </view>
+        <view class="left-province">
+          <text>{{userDataList.usageRate}}%</text>
+          <text>使用率</text>
+        </view>
+      </view>
+      <view class="add-device add-red">
+        <text>当前共有3条报警信息</text>
+        <text class="iconfont icon-jiantou"></text>
+      </view>
+    </view>
+    <view class="comp-sub" wx:for="{{userDataList.bakeroomList}}" wx:key="index" bindtap="handleDeviceProperty">
+      <view class="title">
+        <text>{{item.name}}</text>
+        <text class="{{item.status==1?'':'running'}}">{{item.status==1?'运行中':'停运'}}</text>
+      </view>
+      <view class="device-num">
+        <text>设备型号：</text>
+        <text>{{item.deviceNo}}</text>
+      </view>
+      <view class="device-num">
+        <text>管理员：</text>
+        <text>{{item.managerName==='' || item.managerName==='undefined' || item.managerName===null?'暂无管理员':item.managerName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
